@@ -76,18 +76,18 @@ const About = () => {
         <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[var(--background-color)] via-[rgba(0, 0, 0, 0.7)] to-[var(--background-color)] opacity-80 -z-5`}></div>
 
         <Card
-          className="relative w-full h-80 p-6 rounded-lg shadow-lg flex items-center transition-all duration-500"
+          className="relative w-full h-auto sm:h-[400px] md:h-80 p-6 rounded-lg shadow-lg flex items-center transition-all duration-500"
           style={{
             boxShadow: theme === 'dark' ? '0px 10px 20px rgba(255, 255, 255, 0.2)' : '0px 10px 20px rgba(0, 0, 0, 0.15)',
           }}
         >
           <h1 className="text-left text-3xl font-bold mb-3 ml-3 text-[var(--text-color)] text-shadow-md">
             {titleText}
-            {!isTitleCompleteRef.current && cursorVisible && <span className="cursor-title"></span>} {/* Cursor grande para el título */}
+            {!isTitleCompleteRef.current && cursorVisible && <span className="cursor-title"></span>}
           </h1>
           <p className="m-0 text-[var(--text-color)] text-left ml-3 text-shadow-md">
             {bodyText}
-            {isTitleCompleteRef.current && cursorVisible && <span className="cursor-paragraph"></span>} {/* Cursor pequeño para el párrafo */}
+            {isTitleCompleteRef.current && cursorVisible && <span className="cursor-paragraph"></span>}
           </p>
         </Card>
       </div>
