@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.p-tooltip .p-tooltip-text {
+  background-color: #808080;  
+  color: white;  
+  font-size: 14px;
+  padding: 8px 12px;  
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.scroll-offset {
+  scroll-margin-top: 80px; 
+}
+
+.p-toast {
+  z-index: 9999 !important;
+  background-color: var(--toast-bg-color); /* Fondo predeterminado del Toast */
+  color: var(--toast-text-color); /* Texto predeterminado del Toast */
+}
+
+.p-toast .p-toast-message {
+  background-color: var(--toast-bg-color);
+  color: var(--toast-text-color);
+}
+
+/* Toast personalizado para el éxito */
+.p-toast .p-toast-message-success {
+  background-color: var(--toast-success-bg-color) !important; /* Fondo verde */
+  color: var(--toast-text-color) !important; /* Texto en blanco */
+  border-left: 5px solid #218838; /* Borde izquierdo verde */
+  box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.4); /* Sombra verde */
+}
+
+/* Toast personalizado para el error */
+.p-toast .p-toast-message-error {
+  background-color: var(--toast-error-bg-color) !important; /* Fondo rojo */
+  color: var(--toast-text-color) !important; /* Texto en blanco */
+  border-left: 5px solid #c82333; /* Borde izquierdo rojo */
+  box-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4); /* Sombra roja */
+}
+
+
+input, select, textarea, .p-inputtext {
+  color: var(--form-text-color); /* Color de texto dentro de los campos */
+}
+
+label {
+  color: var(--form-label-color); /* Color de las etiquetas */
+}
+
+/* Cursor para el título */
+.cursor-title {
+  display: inline-block;
+  width: 12px; 
+  height: 25px; 
+  background-color: currentColor;
+  animation: blink 1s step-end infinite;
+  transform: translateY(5px); /* Ajuste de posición para el título */
+  border-radius: 2px;
+}
+
+/* Cursor para el párrafo */
+.cursor-paragraph {
+  display: inline-block;
+  width: 8px; 
+  height: 15px;
+  background-color: currentColor;
+  animation: blink 1s step-end infinite;
+  transform: translateY(2px); 
+  border-radius: 2px;
+}
+.p-card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cursor-title, .cursor-paragraph {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+

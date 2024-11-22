@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para el modo oscuro */
+[data-theme="dark"] {
+  --background-color: #000; /* Fondo oscuro */
+  --text-color: #fff; /* Texto claro para el cuerpo */
+  --toast-bg-color: #444; /* Fondo del Toast en oscuro */
+  --toast-text-color: #fff; /* Texto del Toast en oscuro */
+  --toast-success-bg-color: #28a745; /* Fondo del Toast en éxito (verde) */
+  --toast-error-bg-color: #dc3545; /* Fondo del Toast en error (rojo) */
+  
+  /* Aseguramos que el texto de los formularios no cambie en el modo oscuro */
+  --form-text-color: #000 !important; /* Texto de formulario en negro */
+  --form-label-color: #888 !important; /* Color de las etiquetas en gris oscuro */
+}
+
+/* Estilos para el modo claro */
+[data-theme="light"] {
+  --background-color: #fff; /* Fondo claro */
+  --text-color: #000; /* Texto oscuro */
+  --toast-bg-color: #444; /* Fondo del Toast en oscuro */
+  --toast-text-color: #fff; /* Texto del Toast en oscuro */
+  --toast-success-bg-color: #28a745; /* Fondo del Toast en éxito (verde) */
+  --toast-error-bg-color: #dc3545; /* Fondo del Toast en error (rojo) */
+  
+  /* Aseguramos que el texto de los formularios no cambie en el modo claro */
+  --form-text-color: #333 !important; /* Texto de formulario en gris oscuro */
+  --form-label-color: #555 !important; /* Color de las etiquetas en gris más claro */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
