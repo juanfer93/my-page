@@ -28,7 +28,7 @@ const ContactForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/send-email`, data);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/send-email`, data);
       if (toast.current) {
         toast.current.show({
           severity: 'success',
