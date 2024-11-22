@@ -20,7 +20,6 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async (req: VercelRequest, res: VercelResponse) => {
-  // Aplicar middleware de CORS
   corsMiddleware(req, res, (err) => {
     if (err) {
       console.error('Error en CORS:', err);
